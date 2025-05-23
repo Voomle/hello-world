@@ -3,20 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Mode Toggle</title>
+    <title>Voomle - Music Streaming</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Theme Toggler</h1>
-        <button id="theme-toggle">Toggle Dark Mode</button>
+        <h1>Voomle</h1>
+        <nav id="nav-auth">
+            <!-- Auth links will go here -->
+        </nav>
     </header>
+
     <main>
-        <section>
-            <h2>Sample Content</h2>
-            <p>This is some sample text to demonstrate the dark mode functionality. When you click the button, the theme of the page will switch between light and dark modes.</p>
+        <section id="auth-section">
+            <h2>Login</h2>
+            <form id="login-form">
+                <div>
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" required>
+                </div>
+                <div>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" required>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p>No account? <a href="#" id="show-register">Register here</a></p>
+
+            <form id="register-form" style="display:none;">
+                <h2>Register</h2>
+                <div>
+                    <label for="register-username">Username:</label>
+                    <input type="text" id="register-username" required>
+                </div>
+                <div>
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" required>
+                </div>
+                <div>
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" required>
+                </div>
+                <button type="submit">Register</button>
+            </form>
+            <p id="register-message" style="display:none;">Already have an account? <a href="#" id="show-login">Login here</a></p>
+        </section>
+
+        <section id="user-section" style="display:none;">
+            <p>Welcome, <span id="user-info"></span>!</p>
+            <button id="logout-button">Logout</button>
+        </section>
+
+        <section id="music-section" style="display:none;">
+            <h2>All Songs</h2>
+            <ul id="songs-list"></ul>
+            
+            <h3>Now Playing</h3>
+            <div id="player">
+                <p><span id="current-song-title"></span> by <span id="current-song-artist"></span></p>
+                <audio id="audio-player" controls></audio>
+            </div>
+        </section>
+
+         <section id="playlist-section" style="display:none;">
+            <h2>My Playlists</h2>
+            <ul id="playlists-list"></ul>
+            <form id="create-playlist-form">
+                <input type="text" id="playlist-name" placeholder="New playlist name" required>
+                <button type="submit">Create Playlist</button>
+            </form>
+
+            <div id="playlist-songs-section" style="display:none;">
+                <h3>Songs in <span id="current-playlist-name"></span></h3>
+                <ul id="current-playlist-songs-list"></ul>
+            </div>
         </section>
     </main>
-    <script src="script.js"></script>
+
+    <footer>
+        <p>&copy; 2023 Voomle</p>
+    </footer>
+
+    <script src="api.js"></script>
+    <script src="auth.js"></script>
+    <script src="ui.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
