@@ -1,0 +1,24 @@
+{
+  "artist_name": "The Demo Tapes",
+  "albums": [
+    {
+      "album_title": "Foundations",
+      "release_year": 2024,
+      "album_art_url": "images/foundations_album_art.png",
+      "songs": [
+        {
+          "song_id": "dt001s01",
+          "title": "Initial Track",
+          "duration_seconds": 180,
+          "file_path": "audio_files/initial_track.mp3"
+        },
+        {
+          "song_id": "dt001s02",
+          "title": "Bootstrap Beat",
+          "duration_seconds": 210,
+          "file_path": "audio_files/bootstrap_beat.mp3"
+        }
+      ]
+    }
+  ]
+}
