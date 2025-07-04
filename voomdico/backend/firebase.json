@@ -1,0 +1,1 @@
+{\n  "firestore": {\n    "rules": "firestore.rules",\n    "indexes": "firestore.indexes.json"\n  },\n  "storage": {\n    "rules": "storage.rules"\n  }\n}

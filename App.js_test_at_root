@@ -1,0 +1,2 @@
+// Test file content at presumed root
+console.log("This is a test file at the repo root.");
