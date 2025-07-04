@@ -1,0 +1,1 @@
+rules_version = '2';\nservice firebase.storage {\n  match /b/{bucket}/o {\n    match /{allPaths=**} {\n      allow read, write: if true; // WARNING: Insecure default for development\n    }\n  }\n}
